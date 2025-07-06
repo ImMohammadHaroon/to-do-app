@@ -35,4 +35,3 @@ A modern full-stack To-Do application built with React.js (Vite), Firebase Authe
 - Update Firebase config in `/src/services/firebase.js`.
 - Style components using Tailwind CSS.
 
----
