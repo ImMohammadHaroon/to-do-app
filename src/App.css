@@ -5,6 +5,46 @@
   text-align: center;
 }
 
+/* Animated gradient background for the app */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient {
+  background: linear-gradient(120deg, #bfdbfe, #f0f9ff, #60a5fa, #3b82f6);
+  background-size: 200% 200%;
+  animation: gradientBG 10s ease-in-out infinite;
+}
+
+/* Fade-in animation for cards */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Animated blob movement for SVGs */
+@keyframes blobMove {
+  0%, 100% { transform: scale(1) translateY(0) translateX(0); }
+  33% { transform: scale(1.08) translateY(-20px) translateX(10px); }
+  66% { transform: scale(0.95) translateY(10px) translateX(-10px); }
+}
+.animate-blob-move {
+  animation: blobMove 16s ease-in-out infinite;
+}
+.animate-blob-move2 {
+  animation: blobMove 18s ease-in-out infinite reverse;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +79,9 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Radial gradient utility for extra glow */
+.bg-gradient-radial {
+  background: radial-gradient(circle at 60% 40%, #fff6, #dbeafe 60%, transparent 100%);
 }
