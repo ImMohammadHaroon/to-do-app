@@ -21,14 +21,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen w-full bg-white text-black">
-      <div className="w-full p-8 bg-white rounded shadow text-black">
-        <h2 className="text-2xl font-bold mb-6 text-center text-black">Login</h2>
-        <form onSubmit={handleLogin} className="space-y-4">
+    <div className="flex items-center justify-center min-h-screen w-full text-black">
+      <div className="w-full max-w-md p-10 bg-white/90 rounded-2xl shadow-2xl text-black border border-blue-100">
+        <h2 className="text-3xl font-extrabold mb-8 text-center text-blue-700 drop-shadow">Login</h2>
+        <form onSubmit={handleLogin} className="space-y-6">
           <input
             type="email"
             placeholder="Email"
-            className="w-full px-4 py-2 border rounded text-black bg-white"
+            className="w-full px-5 py-3 border-2 border-blue-200 rounded-lg text-black bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -36,21 +36,21 @@ export default function LoginPage() {
           <input
             type="password"
             placeholder="Password"
-            className="w-full px-4 py-2 border rounded text-black bg-white"
+            className="w-full px-5 py-3 border-2 border-blue-200 rounded-lg text-black bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          {error && <div className="text-red-500 text-sm">{error}</div>}
+          {error && <div className="text-red-500 text-sm text-center font-medium">{error}</div>}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold text-lg shadow hover:from-blue-700 hover:to-purple-700 transition"
           >
             Login
           </button>
         </form>
-        <p className="mt-4 text-center text-sm text-black">
-          Don't have an account? <Link to="/signup" className="text-blue-600">Sign up</Link>
+        <p className="mt-6 text-center text-base text-gray-700">
+          Don't have an account? <Link to="/signup" className="text-blue-600 font-semibold hover:underline">Sign up</Link>
         </p>
       </div>
     </div>

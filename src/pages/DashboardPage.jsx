@@ -71,18 +71,10 @@ export default function DashboardPage() {
   if (!user) return null;
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden font-sans">
-      {/* Enhanced Animated Gradient Background */}
-      <div className="absolute inset-0 -z-20 animate-gradient bg-gradient-to-br from-blue-300 via-indigo-200 via-60% to-pink-200 opacity-95 blur-[2px]"></div>
-      {/* Extra Layered Gradient for Glow */}
-      <div className="absolute inset-0 -z-10 bg-gradient-radial from-white/60 via-blue-100/40 to-transparent opacity-80 pointer-events-none"></div>
-      {/* Animated Decorative SVG Blobs */}
-      <svg className="absolute top-[-80px] left-[-80px] w-[320px] h-[320px] opacity-40 -z-10 animate-blob-move" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#60A5FA" d="M44.8,-67.6C56.7,-60.2,63.7,-45.2,68.2,-30.2C72.7,-15.2,74.7,-0.2,71.2,13.2C67.7,26.6,58.7,38.3,47.2,47.2C35.7,56.1,21.8,62.2,7.2,62.7C-7.4,63.2,-22.7,58.1,-36.2,50.1C-49.7,42.1,-61.4,31.2,-66.7,17.7C-72,-0.2,-70.9,-16.3,-63.7,-29.2C-56.5,-42.1,-43.2,-51.8,-29.1,-58.2C-15,-64.6,0,-67.7,14.7,-67.2C29.4,-66.7,58.9,-75,44.8,-67.6Z" transform="translate(100 100)" />
-      </svg>
-      <svg className="absolute bottom-[-100px] right-[-100px] w-[370px] h-[370px] opacity-30 -z-10 animate-blob-move2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#f472b6" d="M38.2,-66.2C50.7,-59.2,62.2,-50.7,68.2,-39.2C74.2,-27.7,74.7,-13.2,72.2,-0.2C69.7,12.8,64.2,25.6,56.2,36.2C48.2,46.8,37.7,55.2,25.2,60.2C12.7,65.2,-1.8,66.8,-15.2,63.2C-28.6,59.6,-41,50.8,-51.2,40.2C-61.4,29.6,-69.4,17.2,-71.2,3.7C-73,-9.8,-68.6,-24.4,-60.2,-36.2C-51.8,-48,-39.4,-57,-26.2,-63.2C-13,-69.4,1.1,-72.8,15.2,-71.2C29.3,-69.6,58.6,-73.2,38.2,-66.2Z" transform="translate(100 100)" />
-      </svg>
+    <div className="relative min-h-screen w-full overflow-hidden font-sans text-black">
+      {/* Enhanced Animated Gradient Background - removed, now handled by root */}
+      {/* Extra Layered Gradient for Glow - removed, now handled by root */}
+      {/* Animated Decorative SVG Blobs - removed, now handled by root */}
       {/* Main Content */}
       <header className="flex justify-between items-center px-8 py-6 shadow-lg bg-white/80 backdrop-blur rounded-b-2xl border-b border-blue-200 w-full">
         <h2 className="text-4xl font-extrabold text-blue-700 tracking-tight drop-shadow-lg">My To-Do List</h2>
